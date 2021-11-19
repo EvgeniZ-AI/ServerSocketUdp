@@ -38,9 +38,9 @@ namespace UdpServerVer_1
 
                 Console.WriteLine(data);
 
-                // выход из цикла нужно ли?
+                
             }
-            // закрытие сокета нужно?
+            
         }
     }
 }

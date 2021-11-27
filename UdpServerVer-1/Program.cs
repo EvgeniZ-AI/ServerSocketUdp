@@ -39,9 +39,9 @@ namespace UdpServerVer_1
 
                 Console.WriteLine(data);
 
-                
+                //выход из цикла!
             }
-            
+            //звкрытие сокета!
         }
     }
 }

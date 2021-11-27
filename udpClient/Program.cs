@@ -12,20 +12,21 @@ namespace udpClient
     {
         static void Main(string[] args)
         {
-            const string ip = "127.0.0.1";
-            const int port = 8082;
+            //client code
+            const string ip = "127.0.0.1";//create ip
+            const int port = 8082;//create port
 
-            var udpEndPoint = new IPEndPoint(IPAddress.Parse(ip), port);
+            var udpEndPoint = new IPEndPoint(IPAddress.Parse(ip), port);//endPoint
 
-            var udpSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            udpSocket.Bind(udpEndPoint);
+            var udpSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);//socket
+            udpSocket.Bind(udpEndPoint);//bind
 
             while (true)
             {
                 Console.WriteLine("Введите сообщение");
-                var messeg = Console.ReadLine();
+                var messeg = Console.ReadLine();// create messege
 
-                var serverEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8081);
+                var serverEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8081);//connection
                 udpSocket.SendTo(Encoding.UTF8.GetBytes(messeg), serverEndPoint);
 
                 var bufer = new byte[256];

@@ -12,6 +12,7 @@ namespace UdpServerVer_1
     {
         static void Main(string[] args)
         {
+            //Server cod
             const string ip = "127.0.0.1";
             const int port = 8081;
 
